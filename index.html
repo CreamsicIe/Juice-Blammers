@@ -378,7 +378,7 @@ body.touch #bombNote{bottom:calc(200px + env(safe-area-inset-bottom,0px))}
 
 <div id="menu" class="screen">
   <div class="panel">
-    <div class="titlewrap"><h1 id="logo" class="logo" aria-label="Juice Blammers"></h1><span class="badge">Version Kool.1</span></div>
+    <div class="titlewrap"><h1 id="logo" class="logo" aria-label="Juice Blammers"></h1><span class="badge">Version Kool.2</span></div>
     <p class="tag">Pick a flavor, grab a juice box, and blam every other flavor off the picnic table. Play solo against bots, or online with friends using a 4-digit lobby code.</p>
     <div class="cap">Choose your flavor</div>
     <div id="flavorGrid" class="flavors" role="group" aria-label="Flavors"></div>
@@ -3323,7 +3323,7 @@ async function enterGame(code, host){
     const c = e && e.code;
     if (c === 'code_taken' && host){ $('createBtn').disabled = $('joinBtn').disabled = false; return createLobby(); }
     if (NET.p2p){
-      setNetStatus(c === 'not_found' ? 'No lobby with code ' + code + ' right now. Check the code with whoever is hosting. If they are on a phone, the game has to stay open on their screen. If either of you had the game open from before, reload the page so you both have the latest version.'
+      setNetStatus(c === 'not_found' ? 'No lobby with code ' + code + ' right now. Check the code with whoever is hosting. If they are on a phone, the game has to stay open on their screen. If either of you had the game open from before, reload the page so you both have the latest version (Kool.2, shown on the title screen).'
         : c === 'full' ? 'That lobby is full. Up to ' + NET_MAX + ' people can play in one lobby.'
         : c === 'no_route' ? "Found the lobby but couldn't connect to the host. A VPN (Opera's built-in one counts) or a school or work network can block game connections. Turn the VPN off or try another network, then join again."
         : c === 'not_permitted' ? "This browser can't connect players directly. Try a current Chrome, Edge, Firefox, Opera or Safari."
